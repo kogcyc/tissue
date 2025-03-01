@@ -1,0 +1,8 @@
+{
+  "source_directory": "source",
+  "skip_directories": ["source/static"],
+  "build_directory": "public",
+  "collections": ["index", "pages", "posts"],
+  "default_template": "base.html",
+  "template_dir": "source/static/templates"
+}
