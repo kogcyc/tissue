@@ -26,10 +26,11 @@ def copy_directories(config):
     build_dir = config.get('build_directory', 'build')
     source_dir = config.get('source_directory', 'source')
     copy_dirs = config.get('copy_to_build_dirs', [])
-    
+    #print(copy_dirs)
     for copy_dir in copy_dirs:
-        src_path = os.path.join(source_dir, copy_dir)
-        dest_path = os.path.join(build_dir, copy_dir)
+        src_path = copy_dir #os.path.join(source_dir, copy_dir)
+        print(src_path)
+        dest_path = os.path.join(build_dir, copy_dir.split("/")[-1])
         if os.path.exists(src_path):
             shutil.copytree(src_path, dest_path, dirs_exist_ok=True)
             print(f"Copied {src_path} to {dest_path}")
@@ -111,15 +112,15 @@ def main():
                 'fn': filename
             }
 
-    print(all_file_data)
+    #print(all_file_data)
 
     # Filtering only 'pages' collection
     pages_data = filter_file_data(all_file_data, lambda x: x['collection'] == 'pages')
-    print("Filtered pages collection:", pages_data)
+    #print("Filtered pages collection:", pages_data)
 
     # Selecting three random entries from 'pages' collection
     random_pages_data = select_random_entries(pages_data, 3)
-    print("Randomly selected pages:", random_pages_data)
+    #print("Randomly selected pages:", random_pages_data)
 
     for filepath, data in all_file_data.items():
         render_html(config=config, filedata=data, lump='example_value')
