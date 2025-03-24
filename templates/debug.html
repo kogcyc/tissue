@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html {
+            padding: 0px 10px;
+            font-family: monospace;
+            font-size: 1.2em;
+            background-color: #AB7;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+
+    {% include "_rendered.html" %}
+
+    <h1>{{ title }}</h1>
+
+    <p>title: {{ title }}</p>   
+    <p>desc: {{ desc }}</p>
+    <p>imago: {{ imago }}</p>  
+    <p>css_class: {{ css_class }}</p>
+    <p>sort_class: {{ sort_class }}</p> 
+    <p>template: {{ template }}</p>
+    <p>content:</p>
+    <fieldset>
+    {{ content | safe }}
+    </fieldset>
+
+</div>
+
+<div>
+
+{% for page in all_pages %}
+    <p>Site Index page attributes:<strong>{{page.url}}</strong></p>
+    <ul>
+        {% for key, value in page.items() %}
+            <li>{{ key }}: {{ value }}</li>
+        {% endfor %}
+    </ul>
+{% endfor %}
+
+</div>
+
+
+
+        
+</body>
+</html>
