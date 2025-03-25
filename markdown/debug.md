@@ -6,6 +6,19 @@ css_class:
 sort_class: 
 template: debug
 ---
-This is line one of content.
+This is the content found in /markdown/debug.md
 
-This is line two of content.
+It is Markdown text that has been rendered
+
+<br>
+```
+this == code;
+```
+<br><br>
+
+and this:
+
+- hello
+- world
+
+is a list

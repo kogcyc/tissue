@@ -3,34 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
     <style>
-        html {
-            padding: 0px;
-            font-family: monospace;
-            font-size: 1.2em;
-            background-color: #fff;
-        }
     </style>
 </head>
 <body>
 
+<header><nav>
+
+    {% include "_nav.html" %}
+
+</nav></header>
+
+<main>
+
 <div>
-
-    {% include "_rendered.html" %}
-
-    <h1>{{ title }}</h1>
-
-    <p>title: {{ title }}</p>   
-    <p>desc: {{ desc }}</p>
-    <p>imago: {{ imago }}</p>  
-    <p>css_class: {{ css_class }}</p>
-    <p>sort_class: {{ sort_class }}</p> 
-    <p>template: {{ template }}</p>
-    <p>content:</p>
-    <fieldset>
-    {{ content | safe }}
-    </fieldset>
-
+<br>
+{% include "_index_partial.html" %}
 </div>
 
 <div>
@@ -46,8 +35,17 @@
 
 </div>
 
+</main>
 
+<footer>
 
+<div>
+
+    {% include "_footer.html" %}
+
+</div>
+
+</footer>
         
 </body>
 </html>

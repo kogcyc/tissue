@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ace;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+code {
+  background-color: #000;
+  color: #0f0;
+  font-family: monospace;
+  padding: 10px;
+}
+
+main {
+  background-color: #cea;
+  padding: 0 10px;
+}
+
+.nav-item-left {
+  transform: scale(1.0);
+  transform-origin: left center;
+}
+
+.nav-item-right {
+  transform: scale(1.0);
+  transform-origin: right center;
+}
+
+.nav-container {
+  background-color: #f99;
+  display: grid;
+  grid-template-columns: 1fr 30px;
+  grid-template-rows: auto;
+  height: 40px;
+  padding: 4px 10px 0 10px;
+}
+
+.footer-container {
+  font-size: 0.8em;
+  background-color: #000;
+  color: #fff;
+  padding: 4px 0 20px 10px;
+  
+}

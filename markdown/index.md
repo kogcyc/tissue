@@ -1,9 +1,11 @@
 ---
 title: Home Page
 desc: 
-imago: 
+imago: /images/eddy.jpg
 css_class:
 sort_class: 
-template: index
+template: 
 ---
-Welcome to Kogswell Cycles
+##welcome##
+
+We are so glad to see you!

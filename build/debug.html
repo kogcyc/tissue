@@ -24,33 +24,36 @@ code {
 
 <div>
 
-    {% include "_rendered.html" %}
+    <p>this is _rendered.html in the templates dir</p>
 
-    <h1>{{ title }}</h1>
+    <h1>Debug Page</h1>
 
-    <p>title: {{ title }}</p>   
-    <p>desc: {{ desc }}</p>
-    <p>imago: {{ imago }}</p>  
-    <p>css_class: {{ css_class }}</p>
-    <p>sort_class: {{ sort_class }}</p> 
-    <p>template: {{ template }}</p>
+    <p>title: Debug Page</p>   
+    <p>desc: None</p>
+    <p>imago: None</p>  
+    <p>css_class: None</p>
+    <p>sort_class: None</p> 
+    <p>template: debug.html</p>
     <p>content:</p>
     <fieldset>
-    {{ content | safe }}
+    <p>This is the content found in /markdown/debug.md</p>
+<p>It is Markdown text that has been rendered</p>
+<p><br>
+<code>this == code;</code>
+<br><br></p>
+<p>and this:</p>
+<ul>
+<li>hello</li>
+<li>world</li>
+</ul>
+<p>is a list</p>
     </fieldset>
 
 </div>
 
 <div>
 
-{% for page in all_pages %}
-    <p>Site Index page attributes:<strong>{{page.url}}</strong></p>
-    <ul>
-        {% for key, value in page.items() %}
-            <li>{{ key }}: {{ value }}</li>
-        {% endfor %}
-    </ul>
-{% endfor %}
+
 
 </div>
 

@@ -1,0 +1,3 @@
+while inotifywait -r -e modify .; do
+  python3 builder.py
+done

@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ace;
+}
+
+div {
+  background-color: #eca;
+  padding: 10px 20px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+img {width: 25%;}
+
+.nav-item-left {
+  padding: 10px;
+  transform: scale(1.0);
+  transform-origin: left center;
+}
+.nav-item-right {
+  padding: 10px;
+  transform: scale(1.0);
+  transform-origin: right center;
+}
+
+.nav-container {
+  background-color: #f99;
+  display: grid;
+  grid-template-columns: 1fr 50px;
+  grid-template-rows: 1fr;
+  height: 56px;
+  padding: 4px 0px;
+}
