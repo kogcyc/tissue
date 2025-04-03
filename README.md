@@ -1,4 +1,4 @@
-#Tissue: A Static Site Generator (Reverse-Engineered)#
+# Tissue: A Static Site Generator #
 
 **Purpose:**
 This static site generator transforms a directory of Markdown files with frontmatter into a fully rendered static HTML site. It uses Jinja2 for templating, supports partials, allows for custom templates per page, includes automatic filtering of content subsets, and generates SEO-friendly output including a sitemap.
